@@ -17,3 +17,4 @@ e.g.
 2. Ensure you have set the Java version in the Project Structure otherwise you will get an error
 3. When you go into the `StringCalculatorTest.java` you should see a green play button on the left
 
+![img.png](img.png)

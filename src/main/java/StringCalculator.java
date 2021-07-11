@@ -7,11 +7,11 @@ public class StringCalculator {
         return input1 + input2;
     }
 
-    public int add(String initialInput) {
-        String[] inputsSeperated = initialInput.split(",");
+    public int add(String inputString) {
+        String[] inputsSeperated = inputString.split(",");
 
         if (inputsSeperated.length > 3) {
-            throw new IllegalArgumentException("Can only add up to 3 numbers but input was: " + initialInput);
+            throw new IllegalArgumentException("Can only add up to 3 numbers but input was: " + inputString);
         }
 
         List<Integer> numbers = new ArrayList<>();

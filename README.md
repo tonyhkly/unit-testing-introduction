@@ -13,7 +13,9 @@ e.g.
 
 ### Considerations
 * You cannot add more than 3 numbers. Anymore than that will produce an error e.g. "5,10,20,25" is not a valid input
-* Any values passed in that are not numbers will fallback to zero e.g. "5,8,nine" will have output 13 
+* Any values passed in that are not numbers will fallback to zero e.g. "5,8,nine" will have output 13
+* There is no minimum number of numbers so "" is actually a valid input and will throw 0
+* Currently passing in null has not been handled and ideally should be handled in the code `add(null)` 
 
 ## Getting Started
 

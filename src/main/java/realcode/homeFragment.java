@@ -1,16 +1,20 @@
 package realcode;
 
 
+import static realcode.Id.*;
+import static realcode.Id.accessories;
+import static realcode.Id.shoes;
+
 public class homeFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(Layout.fragment_home, container, false);
 
-        Button topButton = (Button) view.findViewById(Id.tops);
-        Button bottomButton = (Button) view.findViewById(Id.bottoms);
-        Button accButton = (Button) view.findViewById(Id.accessories);
-        Button shoesButton = (Button) view.findViewById(Id.shoes);
+        Button topButton = (Button) view.findViewById(tops);
+        Button bottomButton = (Button) view.findViewById(bottoms);
+        Button accButton = (Button) view.findViewById(accessories);
+        Button shoesButton = (Button) view.findViewById(shoes);
 
         topButton.setOnClickListener(this);
         bottomButton.setOnClickListener(this);
@@ -22,24 +26,26 @@ public class homeFragment extends Fragment {
 
     public void onClick (View view){
         //opening an activity depending on item category
-/*        switch (view.getId()) {
-            case Id.tops:
-                Intent intentTops = new Intent(getContext(), topFragment.class);
+        switch (view.getId()) {
+            case tops:
+                Intent intentTops = new Intent(getContext(), new topFragment());
                 startActivity(intentTops);
                 break;
-            case Id.bottoms:
-                Intent intentBot = new Intent(getContext(), bottomsFragment.class);
+            case bottoms:
+                Intent intentBot = new Intent(getContext(), new bottomsFragment());
                 startActivity(intentBot);
                 break;
-            case Id.accessories:
-                Intent intentAcc = new Intent(getContext(), accessoriesFragment.class);
+            case accessories:
+                Intent intentAcc = new Intent(getContext(), new accessoriesFragment());
                 startActivity(intentAcc);
                 break;
-            case Id.shoes:
-                Intent intentShoes = new Intent(getContext(), shoesFragment.class);
+            case shoes:
+                Intent intentShoes = new Intent(getContext(), new shoesFragment());
                 startActivity(intentShoes);
                 break;
-        }*/
+            default:
+                throw new IllegalStateException("Unexpected value: " + view.getId());
+        }
     }
 
 }

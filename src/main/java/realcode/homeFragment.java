@@ -1,9 +1,10 @@
 package realcode;
 
 
-import static realcode.Id.*;
 import static realcode.Id.accessories;
+import static realcode.Id.bottoms;
 import static realcode.Id.shoes;
+import static realcode.Id.tops;
 
 public class homeFragment extends Fragment {
 
